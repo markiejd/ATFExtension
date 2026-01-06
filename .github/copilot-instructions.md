@@ -1,0 +1,3 @@
+- Keep changes minimal and focused on the requested VS Code extension behavior.
+- Prefer TypeScript and the stable VS Code API.
+- Avoid adding extra commands, UI, or features beyond what's requested.
