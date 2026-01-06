@@ -1,9 +1,9 @@
 {
-  "name": "line-context-menu",
+  "name": "atf-context-menu",
   "displayName": "Line Context Menu",
   "description": "Adds a right-click command that operates on a single selected line.",
-  "version": "0.0.1",
-  "publisher": "local",
+  "version": "0.0.2",
+  "publisher": "MJD",
   "engines": {
     "vscode": "^1.85.0"
   },
