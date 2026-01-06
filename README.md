@@ -29,8 +29,10 @@ To create a `.vsix` file for distribution or local installation:
 
 2. Package the extension:
    ```bash
-   vsce package
+   npx vsce package --allow-missing-repository
    ```
+
+2.1 *you may be asked about licence - for now (version 0.1) you can ignore
 
 3. The `.vsix` file will be created in the project root directory.
    - Current filename: **`MJD.atf-context-menu-0.0.2.vsix`**
