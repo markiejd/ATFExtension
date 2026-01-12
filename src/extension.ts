@@ -235,14 +235,15 @@ function generateCSharpMethod(stepLine: string): string {
     `${bindingAttribute ? `${bindingAttribute}\r\n` : ''}` +  // Attribute (if valid)
     `${signature}\r\n` +                                        // Method signature
     `{\r\n` +                                                   // Opening brace
-    `    ${buildProcAssignment(stepLine, parameterNames)}\r\n` + // Proc string assignment
-    `\r\n` +
-    `    if (CombinedSteps.OutputProc(proc))\r\n` +            // Call to framework
-    `    {\r\n` +
-    `        return false;\r\n` +
-    `    }\r\n` +
-    `\r\n` +
-    `    return false;\r\n` +
+    `   ${buildProcAssignment(stepLine, parameterNames)}\r\n` + // Proc string assignment
+    `    \r\n` +
+    `   if (CombinedSteps.OutputProc(proc))\r\n` +            // Call to framework
+    `   {\r\n` +
+    `     return false;\r\n  // make me true!` +
+    `     //return true;\r\n` +
+    `   }\r\n` +
+    `   CombinedSteps.Failure(proc);\r\n` +
+    `   return false;\r\n` +
     `}`
   );
 }
